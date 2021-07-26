@@ -1,0 +1,10 @@
+{
+  "game_versions": ["1.17.1"],
+  "editions": [
+    {
+      "name": "Enhancements",
+      "display_name": "Nova Enhancements",
+      "compatible_versions": ["1.17.1"]
+    }
+  ]
+}
