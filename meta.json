@@ -2,8 +2,8 @@
   "game_versions": ["1.17.1"],
   "editions": [
     {
-      "name": "Enhancements",
-      "display_name": "Nova Enhancements",
+      "name": "nova-companion",
+      "display_name": "Nova Companion",
       "compatible_versions": ["1.17.1"]
     }
   ]
