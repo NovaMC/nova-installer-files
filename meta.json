@@ -4,14 +4,14 @@
     {
       "name": "nova-companion",
       "display_name": "Nova Companion",
-      "version": "2.2",
+      "version": "2.2.1",
       "compatible_versions": ["1.18.1"]
     },
     {
       "name": "nova-companion-opt",
       "display_name": "Nova Companion (OptiFine)",
       "unstable": true,
-      "version": "2.2",
+      "version": "2.2.1",
       "compatible_versions": ["1.18.1"]
     }
   ]
