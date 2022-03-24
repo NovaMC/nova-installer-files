@@ -1,0 +1,6 @@
+{
+  "version": "2.3",
+  "edition": "nova-companion",
+  "installer-api-url": "https://api.github.com/repos/NovaMC/nova-installer/releases/latest",
+  "modpack-meta-url": "https://raw.githubusercontent.com/NovaMC/nova-installer-files/master/meta.json"
+}

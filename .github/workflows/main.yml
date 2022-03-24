@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
       - id: set_var
         run: |
-          content=`cat ./$INPUT_PACKNAME/meta.json`
+          content=`cat ./packs/$INPUT_PACKNAME/meta.json`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
@@ -34,7 +34,7 @@ jobs:
           # end of optional handling for multi line json
           echo "::set-output name=metaJson::$content"
       - name: Zip pack
-        run: zip -r pack.zip $INPUT_PACKNAME/*
+        run: zip -r pack.zip packs/$INPUT_PACKNAME/*
       - name: Release pack
         uses: marvinpinto/action-automatic-releases@latest
         with:
