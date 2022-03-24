@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
       - id: set_var
         run: |
-          content=`cat ./packs/$INPUT_PACKNAME/meta.json`
+          content=`cat ./packs/${{ github.event.inputs.packName }}/meta.json`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
@@ -39,6 +39,6 @@ jobs:
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v${{ fromJson(steps.set_var.outputs.metaJson).version }}-$INPUT_PACKNAME"
+          automatic_release_tag: "v${{ fromJson(steps.set_var.outputs.metaJson).version }}-${{ github.event.inputs.packName }}"
           prerelease: false
           files: pack.zip
