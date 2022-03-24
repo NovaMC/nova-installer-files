@@ -1,6 +1,0 @@
-# Stock Vanilla RTX Profile
-ROUND_SUN_MOON=false
-sunPathRotation=0.0
-CLOUDS=false
-WATER_TYPE=2
-VANILLA_SKYBOX=true
