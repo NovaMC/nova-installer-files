@@ -35,8 +35,9 @@ jobs:
           echo "::set-output name=metaJson::$content"
       - name: Zip pack
         run: |
-          cd packs/$INPUT_PACKNAME
-          zip -r ../../pack.zip *
+          cd packs/${{ github.event.inputs.packName }}
+          zip -r pack.zip *
+          mv pack.zip ../../pack.zip
       - name: Release pack
         uses: marvinpinto/action-automatic-releases@latest
         with:
