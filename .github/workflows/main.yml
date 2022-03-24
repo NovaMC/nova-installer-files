@@ -3,7 +3,12 @@
 name: Release
 
 # Controls when the workflow will run
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      packName:
+        description: 'Name of pack to release'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,22 +24,21 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Zip pack
-        run: zip -r pack.zip *
       - id: set_var
         run: |
-          content=`cat ./meta.json`
+          content=`cat ./$INPUT_PACKNAME/meta.json`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
           # end of optional handling for multi line json
           echo "::set-output name=metaJson::$content"
+      - name: Zip pack
+        run: zip -r pack.zip $INPUT_PACKNAME/*
       - name: Release pack
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v${{ fromJson(steps.set_var.outputs.metaJson).version }}-${{ github.ref_name }}"
+          automatic_release_tag: "v${{ fromJson(steps.set_var.outputs.metaJson).version }}-$INPUT_PACKNAME"
           prerelease: false
-          title: "v${{ fromJson(steps.set_var.outputs.metaJson).version }}-${{ github.ref_name }}"
           files: pack.zip
