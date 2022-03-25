@@ -2,8 +2,10 @@
   "editions": [
     {
       "name": "nova-companion",
+      "version": "2.4",
       "display_name": "Nova Companion",
-      "minecraft_version": "1.18.1"
+      "minecraft_version": "1.18.1",
+      "compatible_versions": ["1.18.1"]
     }
   ]
 }
