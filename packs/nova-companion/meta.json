@@ -1,5 +1,5 @@
 {
-  "version": "2.4",
+  "version": "2.5",
   "edition": "nova-companion",
   "installer-api-url": "https://api.github.com/repos/NovaMC/nova-installer/releases/latest",
   "modpack-base-url": "https://raw.githubusercontent.com/NovaMC/nova-installer-files/master/packs/"
