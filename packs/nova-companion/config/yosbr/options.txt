@@ -14,7 +14,6 @@ key_key.loadToolbarActivator:key.keyboard.unknown
 key_iris.keybind.reload:key.keyboard.unknown
 key_iris.keybind.toggleShaders:key.keyboard.k
 key_iris.keybind.shaderPackSelection:key.keyboard.o
-key_key.okzoomer.zoom:key.keyboard.c
 key_key.plasmo_voice.settings:key.keyboard.v
 soundCategory_master:1.0
 soundCategory_music:0.05
