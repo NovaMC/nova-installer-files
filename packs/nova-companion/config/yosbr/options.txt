@@ -4,13 +4,16 @@ enableVsync:false
 renderDistance:16
 simulationDistance:8
 guiScale:3
-resourcePacks:["vanilla","lambdabettergrass/default","continuity/glass_pane_culling_fix","continuity/default","cullleaves/smartleaves"]
+resourcePacks:["vanilla","Fabric Mods","lambdabettergrass/default","continuity/glass_pane_culling_fix","continuity/default"]
+incompatibleResourcePacks:["lambdabettergrass/default"]
 tutorialStep:none
 skipMultiplayerWarning:true
 joinedFirstServer:true
 syncChunkWrites:false
 key_key.saveToolbarActivator:key.keyboard.unknown
 key_key.loadToolbarActivator:key.keyboard.unknown
+key_zoomify.key.zoom:key.keyboard.c
+key_zoomify.key.gui:key.keyboard.unknown
 key_iris.keybind.reload:key.keyboard.unknown
 key_iris.keybind.toggleShaders:key.keyboard.k
 key_iris.keybind.shaderPackSelection:key.keyboard.o
