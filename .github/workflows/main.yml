@@ -41,8 +41,8 @@ jobs:
           cd ../../
       - name: Merge & zip multimc pack
         run: |
-          mkdir -p merged_data/.minecraft
-          cp -R packs/${{ github.event.inputs.packName }}/* merged_data/.minecraft/
+          mkdir -p merged_data/minecraft
+          cp -R packs/${{ github.event.inputs.packName }}/* merged_data/minecraft/
           cp -R multimc/${{ github.event.inputs.packName }}/* merged_data/
           cd merged_data/
           zip -r multimc.zip *
