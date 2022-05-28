@@ -38,10 +38,23 @@ jobs:
           cd packs/${{ github.event.inputs.packName }}
           zip -r pack.zip *
           mv pack.zip ../../pack.zip
+          cd ../../
+      - name: Merge & zip multimc pack
+        run: |
+          mkdir -p merged_data/.minecraft
+          cp -R packs/${{ github.event.inputs.packName }}/* merged_data/.minecraft/
+          cp -R multimc/${{ github.event.inputs.packName }}/* merged_data/
+          cd merged_data/
+          zip -r multimc.zip *
+          mv multimc.zip ../multimc.zip
+          cd ../
+          rm -R merged_data
       - name: Release pack
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "v${{ fromJson(steps.set_var.outputs.metaJson).version }}-${{ github.event.inputs.packName }}"
           prerelease: false
-          files: pack.zip
+          files: |
+            pack.zip
+            multimc.zip
