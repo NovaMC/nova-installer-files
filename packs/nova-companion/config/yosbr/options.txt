@@ -1,15 +1,16 @@
-version:2975
+version:3105
 autoJump:false
 enableVsync:false
 renderDistance:16
 simulationDistance:8
 guiScale:3
 resourcePacks:["vanilla","Fabric Mods","lambdabettergrass/default","continuity/glass_pane_culling_fix","continuity/default"]
-incompatibleResourcePacks:["lambdabettergrass/default"]
+incompatibleResourcePacks:[]
 tutorialStep:none
 skipMultiplayerWarning:true
 joinedFirstServer:true
 syncChunkWrites:false
+onlyShowSecureChat:false
 key_key.saveToolbarActivator:key.keyboard.unknown
 key_key.loadToolbarActivator:key.keyboard.unknown
 key_zoomify.key.zoom:key.keyboard.c
