@@ -6,7 +6,7 @@
     "fire": true,
     "portal": true,
     "block_animations": true,
-    "sculk_sensor": false
+    "sculk_sensor": true
   },
   "particle_settings": {
     "particles": true,
@@ -40,7 +40,8 @@
     "item_frame": true,
     "armor_stand": true,
     "painting": true,
-    "piston": true
+    "piston": true,
+    "beacon_beam": true
   },
   "extra_settings": {
     "overlay_corner": "TOP_LEFT",

@@ -5,7 +5,7 @@ mainMenu {
             x = 2
             y { it - 20 }
         }
-        text = literal("Nova Companion 2.5.2")
+        text = literal("Nova Companion 2.6")
         align = "left"
         color = 0xFFFFFF
         hoveredColor = 0x6DFFFB
